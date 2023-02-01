@@ -15,7 +15,7 @@ const Redirect = () => {
       setTime((t) => t - 1);
 
       if (time <= 0) {
-        navigate("/about");
+        navigate("/about", { state: `This is the state: ${Math.random()}` });
       }
 
       return clearTimeout(timeout.current);

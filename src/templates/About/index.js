@@ -1,13 +1,18 @@
 import React, { useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../../components/NavBar";
 
 const About = () => {
   const tab = "Exemple Router Dom About";
+  const location = useLocation();
+  const { state } = location;
+
+  console.log(state);
 
   useEffect(() => {
     document.title = tab;
   }, []);
+
   return (
     <section className="section_about">
       <Navbar />
@@ -17,6 +22,7 @@ const About = () => {
         >
           About
         </h1>
+        <p>{state}</p>
         {/* Para aparecer o Texto aninhado basta passar um prametro na url do roteamento */}
         <Outlet />
       </center>
