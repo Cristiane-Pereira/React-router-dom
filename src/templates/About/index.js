@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Outlet } from "react-router-dom";
 import Navbar from "../../components/NavBar";
 
 const About = () => {
@@ -10,12 +11,14 @@ const About = () => {
   return (
     <section className="section_about">
       <Navbar />
-      <center>
+      <center style={{ padding: "0px 50px" }}>
         <h1
           style={{ marginTop: "100px", color: "#0D6EFD", fontWeight: "bold" }}
         >
           About
         </h1>
+        {/* Para aparecer o Texto aninhado basta passar um prametro na url do roteamento */}
+        <Outlet />
       </center>
     </section>
   );

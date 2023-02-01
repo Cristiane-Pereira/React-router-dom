@@ -32,6 +32,16 @@ const NavbarComponet = ({ args }) => {
                 <NavLink href="/about">About</NavLink>
               </strong>
             </NavItem>
+            <NavItem>
+              <strong>
+                <NavLink href="/posts">Posts</NavLink>
+              </strong>
+            </NavItem>
+            <NavItem>
+              <strong>
+                <NavLink href="/redirect">Redirect</NavLink>
+              </strong>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
